@@ -5,7 +5,7 @@ from cut import cut
 import time
 #导入必要模块
 
-openai.api_key = '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'	#设置api(来自于play13661948263@gmail.com）
+openai.api_key = 'YOUR_OPENAI_KEY'
 
 def ai(user_input,max_tokens):
     history = [{"role": "system", "content": 'you are a ai called chatgpt-4'}]
