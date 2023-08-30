@@ -8,7 +8,7 @@ import time
 openai.api_key = 'YOUR_OPENAI_KEY'
 
 def ai(user_input,max_tokens):
-    history = [{"role": "system", "content": 'you are a ai called chatgpt-4'}]
+    history = [{"role": "system", "content": 'you are a ai called chatgpt'}]
 
     history.append({"role": "user", "content": user_input})
     response = openai.ChatCompletion.create(
