@@ -18,8 +18,11 @@ pip install beautifulsoup4 googlesearch-python openai
 
 ## 文件说明
 cut.py: 用于文本切割
+
 gethtml.py: 用于获取网页HTML内容
+
 geturl.py: 用于获取搜索结果的URL
+
 main.py: 主程序文件,包含ai调用
 
 ## 欢迎提交Issue。
