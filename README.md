@@ -17,6 +17,11 @@
 ```bash
 pip install beautifulsoup4 googlesearch-python openai
 ```
+## 运行截图
+
+![image](https://github.com/daishuge/search_gpt/assets/122254868/a74c00dd-ae33-4fcf-813f-f4f722c22cfb)
+
+为数不多的成功运行(
 
 ## 文件说明
 gethtml.py: 用于获取网页HTML内容和鉴别输入中的url
