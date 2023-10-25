@@ -31,6 +31,7 @@ main.py: 主程序文件,包含ai调用,输入处理
 ![image](https://github.com/daishuge/search_gpt/assets/122254868/647e5d20-59ec-4181-8838-876e29e5b12b)
 
 "search"_gpt
+
 ![image](https://github.com/daishuge/search_gpt/assets/122254868/e6fd59c7-71a0-4dc7-8be2-3772d8e80c82)
 
 
