@@ -1,4 +1,4 @@
-# search_gpt
+# search_gpt2.0强势来袭!
 
 ## 简介
 这是一个接入google 的chatgpt. 可以访问互联网
