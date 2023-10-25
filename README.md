@@ -25,7 +25,14 @@ geturl.py: google搜索得到排名第一url
 
 main.py: 主程序文件,包含ai调用,输入处理
 
-## 欢迎提交Issue
+## 目前问题
+
+不知为何,"访问"的指令一直报错
+
+```
+请求出现问题: No connection adapters were found for "['https://openai.com/']"
+访问时有错误发生
+```
 
 有时也会出现离谱情况:
 ![image](https://github.com/daishuge/search_gpt/assets/122254868/647e5d20-59ec-4181-8838-876e29e5b12b)
@@ -35,4 +42,4 @@ main.py: 主程序文件,包含ai调用,输入处理
 ![image](https://github.com/daishuge/search_gpt/assets/122254868/e6fd59c7-71a0-4dc7-8be2-3772d8e80c82)
 
 
-欢迎提出issue,大家一起进步
+欢迎提出issue,提出解决方案或发起提问,大家一起进步（*＾-＾*）
