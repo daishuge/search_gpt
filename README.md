@@ -26,3 +26,8 @@ geturl.py: google搜索得到排名第一url
 main.py: 主程序文件,包含ai调用,输入处理
 
 ## 欢迎提交Issue
+
+有时也会出现离谱情况:
+![image](https://github.com/daishuge/search_gpt/assets/122254868/647e5d20-59ec-4181-8838-876e29e5b12b)
+
+欢迎提出issue,大家一起进步
