@@ -14,7 +14,7 @@
 
 ```bash
 pip install beautifulsoup4 googlesearch-python openai
-```1
+```
 
 ## 文件说明
 cut.py: 用于文本切割
