@@ -1,6 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
 
+def find_url(text):
+    # 定义用于匹配URL的正则表达式
+    url_pattern = re.compile(r'https?://[^\s/$.?#].[^\s]*', re.IGNORECASE)
+    
+    # 使用findall方法查找所有匹配项
+    urls = url_pattern.findall(text)
+    
+    return urls
+
 def gethtml(url):
     try:
         response = requests.get(url)

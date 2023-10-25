@@ -1,18 +1,10 @@
 import openai 
 import time 
 import re
+import geturl
+import gethtml
 
-ask='''
-你是一个有用的帮手,你现在被赋予了google搜索和访问互联网的功能.
-如果你想搜索google,你可以把你想搜索的内容放入"<>"中.
-像这样:
-<history of google>
-如果你想获得一个url指向的网站信息,请把url放入"[]"中.
-像这样:
-[http://github.com/xxx]
-你在一次对话中只能进行一种操作
-以下是用户的输入,包含历史记录
-'''
+history = []  # 用于保存历史记录
 
 #调用示例: full_result = fake_api(query,1500,True,1)
 def fake_api(query,max,a,tem):     #用户输入，最大token，是否流式打印，温度
@@ -46,9 +38,42 @@ def fake_api(query,max,a,tem):     #用户输入，最大token，是否流式打
 
 def main():
 
-    query = input("You: ")
+    user_input = input("You: ")
+    history.append("user: "+ user_input)
+    query = "".join(history)
+
+
     if '搜索' in query or 'search' in query:
         search=fake_api("为用户输入制定搜索关键词,你只会返回一个关键词,无需其它说明: "+query,150,True,0.5)
+        history.append("chatgpt搜索了:"+search)
+        print("\n")
+
+        url=geturl.geturl(search)
+        html=gethtml.gethtml(url)
+
+        try:
+            require=fake_api("概括为100~200字的中文,只提取关键信息: "+html,1500,True,0.5)
+            history.append("chatgpt:"+require)
+            print("\n")
+        except:
+            print("搜索时有错误发生")
+    
+    elif '访问' in query or 'visit' in query:
+        url=gethtml.find_url(query)
+
+        html=gethtml.gethtml(url)
+
+        try:
+            require=fake_api("概括为100~200字的中文,只提取关键信息: "+html,1500,True,0.5)
+            history.append("chatgpt:"+require)
+            print("\n")
+        except:
+            print("访问时有错误发生")
+
+    else:
+        require=fake_api(query,1500,True,0.5)
+        history.append("chatgpt:"+require)
+        print("\n")
 
 while True:
     main()
